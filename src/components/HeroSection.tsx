@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/hero-bg-mobile.png')",
+            backgroundImage: "url('/images/hero-bg-mobile.webp')",
           }}
         >
          
@@ -61,7 +61,7 @@ const HeroSection: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/hero-bg.png')",
+            backgroundImage: "url('/images/hero-bg.webp')",
           }}
         >
       

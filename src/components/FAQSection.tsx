@@ -131,7 +131,7 @@ const FAQSection: React.FC = () => {
           <div className="relative hidden lg:block">
             <div className="relative rounded-3xl overflow-hidden shadow-xl">
               <img
-                src="/images/faq-illustration.jpg"
+                src="/images/faq-illustration.webp"
                 alt="FAQ Illustration"
                 className="w-full h-auto object-cover"
                 onError={(e) => {

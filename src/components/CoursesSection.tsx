@@ -18,7 +18,7 @@ const CoursesSection: React.FC = () => {
         "Master the art of online influence, connect with the right audience, create content that resonates, and turn clicks into deals or gigs.",
       price: "₦60,000",
       duration: "2 Months",
-      image: "/images/digital-marketing.jpg",
+      image: "/images/digital-marketing.webp",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const CoursesSection: React.FC = () => {
         "Learn Cybersecurity, an in-demand skill that protects businesses, secures data, and positions you for high-paying global opportunities.",
       price: "₦200,000",
       duration: "3 Months",
-      image: "/images/cyber-security.jpg",
+      image: "/images/cyber-security.webp",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const CoursesSection: React.FC = () => {
         "Master Graphic Design a high-demand creative skill that lets you earn, build brands people love, and create opportunities worldwide.",
       price: "₦60,000",
       duration: "2 Months",
-      image: "/images/graphic-design.jpg",
+      image: "/images/graphic-design.webp",
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const CoursesSection: React.FC = () => {
         "Master Web Development, build platforms that matter, access worldwide opportunities, and turn your skills into profit.",
       price: "₦160,000",
       duration: "2 Months",
-      image: "/images/frontend.jpg",
+      image: "/images/frontend.webp",
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const CoursesSection: React.FC = () => {
         "Learn Backend Web Development power websites behind the scenes, secure data, build scalable systems, and earn from high-demand skills.",
       price: "₦120,000",
       duration: "2 Months",
-      image: "/images/backend.jpg",
+      image: "/images/backend.webp",
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ const CoursesSection: React.FC = () => {
         "Learn Data Analysis transform raw data into insights, make smarter decisions, boost business growth, and earn with in-demand skills.",
       price: "₦120,000",
       duration: "3 Months",
-      image: "/images/data-analysis.jpg",
+      image: "/images/data-analysis.webp",
     },
     {
       id: 7,
@@ -72,7 +72,7 @@ const CoursesSection: React.FC = () => {
         "Learn how to edit videos like a pro, craft eye-catching stories, and transform your skills into steady income.",
       price: "₦60,000",
       duration: "2 Months",
-      image: "/images/video-editing.jpg",
+      image: "/images/video-editing.webp",
     },
     {
       id: 8,
@@ -81,7 +81,7 @@ const CoursesSection: React.FC = () => {
         "Learn the skill of designing seamless user interfaces, master the art of detailed user research, and earn in high-paying currencies.",
       price: "₦80,000",
       duration: "2 Months",
-      image: "/images/uiux-design.jpg",
+      image: "/images/uiux-design.webp",
     },
     {
       id: 9,
@@ -90,7 +90,7 @@ const CoursesSection: React.FC = () => {
         "Learn WordPress development and build responsive, professional websites. From customizing themes and plugins to real-world projects",
       price: "₦120,000",
       duration: "2 Months",
-      image: "/images/wordpress.jpg",
+      image: "/images/wordpress.webp",
     },
   ];
 
