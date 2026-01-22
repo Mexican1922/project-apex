@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  
+  --color-primary-50: #f7edfd;
+  --color-primary-100: #f3d8ff;
+  --color-primary-200: #e9b5ff;
+  --color-primary-300: #d695f3;
+  --color-primary-400: #c56ce0;
+  --color-primary-500: #bf3de8;
+  --color-primary-600: #9D31C0;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #5b1871;
+  --color-primary-900: #581c87;
+  --color-primary-950: #20032c;
+
+
+  --color-secondary-50: #f5f3ff;
+  --color-secondary-100: #f3f0ff;
+  --color-secondary-200: #e0dbff;
+  --color-secondary-300: #d1c4ff;
+  --color-secondary-400: #bfaaff;
+  --color-secondary-500: #9f8df7;
+  --color-secondary-600: #7f63ee;
+  --color-secondary-700: #5e4cbf;
+  --color-secondary-800: #4a3699;
+  --color-secondary-900: #3b2e7d;
+  --color-secondary-950: #20032c;
+
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+
+ --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Cardo", serif;
+  --font-ui: "Geist", system-ui, sans-serif;
+
+  --animate-fade-in: fadeIn 0.3s ease-in-out;
+  --animate-slide-down: slideDown 0.3s ease-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply text-black;
+}
+
+
+@utility nav-link-hover {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
+         after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full;
+}
+
+@utility btn-primary {
+  @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 
+         rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 
+         focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+@utility btn-secondary {
+  @apply bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-3 px-6 
+         rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 
+         focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+}
+
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-secondary-50);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-secondary-300);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary-400);
+  }
+}
