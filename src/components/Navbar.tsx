@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import logo from "/images/Logo.png";
+import logo from "/images/Logo.webp";
 
 interface NavItem {
   name: string;

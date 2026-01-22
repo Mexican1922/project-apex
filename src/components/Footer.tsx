@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
               <img
-                src="/images/Footer-logo.png"
+                src="/images/Footer-logo.webp"
                 alt="APEX Logo"
                 className="h-10 sm:h-12 w-auto"
                 style={{

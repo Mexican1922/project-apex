@@ -136,7 +136,7 @@ const GlobalReachSection: React.FC = () => {
             <div className="relative w-full min-h-[420px] sm:min-h-[480px] lg:min-h-[500px] overflow-visible">
               
               <img
-                src="/images/world-map.png"
+                src="/images/world-map.webp"
                 alt="Global Reach"
                 className="w-full h-auto"
                 style={{

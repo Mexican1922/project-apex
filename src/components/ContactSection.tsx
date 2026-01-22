@@ -70,7 +70,7 @@ const ContactSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div className="hidden lg:block relative rounded-3xl border-2 border-primary-500 overflow-hidden shadow-lg">
             <img
-              src="/images/contact-illustration.jpg"
+              src="/images/contact-illustration.webp"
               alt="Contact Us Illustration"
               className="w-full h-full object-cover"
               style={{
