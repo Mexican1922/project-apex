@@ -14,16 +14,23 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: <Twitter className="w-4 h-4" />, url: "#", name: "Twitter" },
     { icon: <Linkedin className="w-4 h-4" />, url: "#", name: "LinkedIn" },
-    { icon: <Instagram className="w-4 h-4" />, url: "#", name: "Instagram" },
-    { icon: <Facebook className="w-4 h-4" />, url: "#", name: "Facebook" },
+    {
+      icon: <Instagram className="w-4 h-4" />,
+      url: "https://www.instagram.com/apextechhub_1?igsh=eWRyamJ3MHY4bWQ5",
+      name: "Instagram",
+    },
+    {
+      icon: <Facebook className="w-4 h-4" />,
+      url: "https://www.facebook.com/share/17qMc2NPNR/?mibextid=wwXIfr",
+      name: "Facebook",
+    },
   ];
 
   const handleNavClick = (id: string) => {
     const element = document.getElementById(id);
     if (!element) return;
     const offset = 80;
-    const y =
-      element.getBoundingClientRect().top + window.pageYOffset - offset;
+    const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
@@ -49,10 +56,10 @@ const Footer: React.FC = () => {
               />
 
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-lg">
-                At Apex tech hub, our mission is to raise over 1000 youths in the
-                tech industry. The Academy is committed to equipping individuals
-                with in-demand tech skills through practical training,
-                mentorship, and career support.
+                At Apex tech hub, our mission is to raise over 1000 youths in
+                the tech industry. The Academy is committed to equipping
+                individuals with in-demand tech skills through practical
+                training, mentorship, and career support.
               </p>
 
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-lg">
