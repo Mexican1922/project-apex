@@ -19,7 +19,7 @@ const ContactSection: React.FC = () => {
   >("idle");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -37,8 +37,14 @@ const ContactSection: React.FC = () => {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
+    const whatsappNumber = "2347025097100";
+    const message = `Hello! I am ${formData.fullName}.\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+
     setTimeout(() => {
-      console.log("Form submitted:", formData);
       setIsSubmitting(false);
       setSubmitStatus("success");
 
@@ -51,12 +57,15 @@ const ContactSection: React.FC = () => {
       setTimeout(() => {
         setSubmitStatus("idle");
       }, 3000);
-    }, 1500);
+    }, 1000);
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-24"
-    style={{fontFamily: "var(--font-ui)"}}>
+    <section
+      id="contact"
+      className="py-16 lg:py-24"
+      style={{ fontFamily: "var(--font-ui)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-5">
           <h2 className="text-[16px] lg:text-4xl font-semibold text-black mb-1 leading-5.5 lg:leading-10">
