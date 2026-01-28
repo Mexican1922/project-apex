@@ -140,7 +140,9 @@ const CoursesSection: React.FC = () => {
       }
     : null;
 
-  const initializePayment = usePaystackPayment(config || {});
+  const initializePayment = usePaystackPayment(
+    config || { reference: "", email: "", amount: 0, publicKey: "" },
+  );
 
   const onSuccess = (reference: string) => {
     console.log("Payment successful:", reference);
@@ -167,7 +169,7 @@ const CoursesSection: React.FC = () => {
       alert("Please enter a valid email address");
       return;
     }
-    initializePayment(onSuccess, onClose);
+    initializePayment({ onSuccess, onClose });
   };
 
   return (
