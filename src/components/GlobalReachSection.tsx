@@ -20,7 +20,6 @@ interface CertifiedStudent {
   textScale?: number;
 }
 
-
 const GlobalReachSection: React.FC = () => {
   const certifiedStudents: CertifiedStudent[] = [
     {
@@ -31,7 +30,7 @@ const GlobalReachSection: React.FC = () => {
       top: "0",
       left: "24%",
       mobileTop: "-2%",
-    mobileLeft: "18%",
+      mobileLeft: "18%",
       width: 59,
       height: 58,
       shape: "circle",
@@ -45,7 +44,7 @@ const GlobalReachSection: React.FC = () => {
       top: "0",
       right: "18%",
       mobileTop: "-5%",
-    mobileRight: "12%",
+      mobileRight: "12%",
       width: 69,
       height: 64,
       shape: "ellipse",
@@ -59,7 +58,7 @@ const GlobalReachSection: React.FC = () => {
       top: "30%",
       left: "5%",
       mobileTop: "15%",
-    mobileLeft: "-3%",
+      mobileLeft: "-3%",
       width: 69,
       height: 64,
       shape: "ellipse",
@@ -73,7 +72,7 @@ const GlobalReachSection: React.FC = () => {
       bottom: "28%",
       left: "35%",
       mobileBottom: "42%",
-    mobileLeft: "32%",
+      mobileLeft: "32%",
       width: 69,
       height: 64,
       shape: "ellipse",
@@ -87,7 +86,7 @@ const GlobalReachSection: React.FC = () => {
       bottom: "30%",
       left: "54%",
       mobileBottom: "45%",
-    mobileLeft: "50%",
+      mobileLeft: "50%",
       width: 32,
       height: 32,
       shape: "circle",
@@ -95,13 +94,13 @@ const GlobalReachSection: React.FC = () => {
     },
     {
       name: "Queen",
-      role: "UI/UX Designer",
+      role: "Product Designer",
       location: "Australia",
       image: "/images/student3.webp",
       bottom: "50%",
       right: "0",
       mobileBottom: "60%",
-    mobileRight: "-1%",
+      mobileRight: "-1%",
       width: 69,
       height: 64,
       shape: "ellipse",
@@ -130,11 +129,8 @@ const GlobalReachSection: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-
-         
           <div className="order-1 lg:order-2 relative">
             <div className="relative w-full min-h-[420px] sm:min-h-[480px] lg:min-h-[500px] overflow-visible">
-              
               <img
                 src="/images/world-map.webp"
                 alt="Global Reach"
@@ -155,9 +151,9 @@ const GlobalReachSection: React.FC = () => {
                   className="absolute animate-pulse scale-75 sm:scale-90 lg:scale-100"
                   style={{
                     top: student.mobileTop ?? student.top,
-    left: student.mobileLeft ?? student.left,
-    right: student.mobileRight ?? student.right,
-    bottom: student.mobileBottom ?? student.bottom,
+                    left: student.mobileLeft ?? student.left,
+                    right: student.mobileRight ?? student.right,
+                    bottom: student.mobileBottom ?? student.bottom,
                     animationDelay: `${index * 0.3}s`,
                     animationDuration: "3s",
                   }}
@@ -208,22 +204,20 @@ const GlobalReachSection: React.FC = () => {
             </div>
           </div>
 
-      
-<div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
-  <h3 className="text-[20px] lg:text-[32px] font-semibold text-black mb-4 leading-5.5 lg:leading-10 max-w-xl">
-    With over{" "}
-    <span className="text-primary-500">1,000</span> individuals certified, join
-    Apex Tech Academy and take your place as the next tech star.
-  </h3>
+          <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <h3 className="text-[20px] lg:text-[32px] font-semibold text-black mb-4 leading-5.5 lg:leading-10 max-w-xl">
+              With over <span className="text-primary-500">1,000</span>{" "}
+              individuals certified, join Apex Tech Academy and take your place
+              as the next tech star.
+            </h3>
 
-  <button
-    onClick={handleRegisterNow}
-    className="bg-primary-800 hover:bg-primary-900 text-white font-normal py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg cursor-pointer text-[12px] lg:text-[16px]"
-  >
-    Register Now
-  </button>
-</div>
-
+            <button
+              onClick={handleRegisterNow}
+              className="bg-primary-800 hover:bg-primary-900 text-white font-normal py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg cursor-pointer text-[12px] lg:text-[16px]"
+            >
+              Register Now
+            </button>
+          </div>
         </div>
       </div>
     </section>
