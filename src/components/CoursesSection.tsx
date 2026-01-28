@@ -15,7 +15,7 @@ const CoursesSection: React.FC = () => {
       id: 1,
       title: "Digital Marketing",
       description:
-        "Master the art of online influence, connect with the right audience, create content that resonates, and turn clicks into deals or gigs.",
+        "Grow your online influence and connect with the right audience.\n\nYou’ll learn: Social Media Management, Content Creation, and SEO Optimization to create engaging campaigns and turn clicks into deals or gigs.",
       price: "₦60,000",
       duration: "2 Months",
       image: "/images/digital-marketing.webp",
@@ -24,7 +24,7 @@ const CoursesSection: React.FC = () => {
       id: 2,
       title: "Cyber Security",
       description:
-        "Learn Cybersecurity, an in-demand skill that protects businesses, secures data, and positions you for high-paying global opportunities.",
+        "Protect businesses and secure data in the digital world.\n\nYou’ll learn: Network Security, Threat Analysis, Ethical Hacking, and Cybersecurity Best Practices to prepare for high-demand roles globally.",
       price: "₦200,000",
       duration: "3 Months",
       image: "/images/cyber-security.webp",
@@ -33,35 +33,35 @@ const CoursesSection: React.FC = () => {
       id: 3,
       title: "Graphic Designing",
       description:
-        "Master Graphic Design a high-demand creative skill that lets you earn, build brands people love, and create opportunities worldwide.",
-      price: "₦60,000",
+        "Create visually stunning designs and communicate ideas effectively.\n\nYou’ll learn: Photoshop and Lightroom, wireframing, prototyping, and designing graphics for web, mobile, and branding projects.",
+      price: "₦80,000",
       duration: "2 Months",
       image: "/images/graphic-design.webp",
     },
     {
       id: 4,
-      title: "Web Development-Frontend",
+      title: "Web Development - Frontend",
       description:
-        "Master Web Development, build platforms that matter, access worldwide opportunities, and turn your skills into profit.",
-      price: "₦160,000",
-      duration: "2 Months",
+        "Learn modern frontend development and build platforms that matter.\n\nCourses include: HTML, CSS, JavaScript, React, Git/GitHub, Responsive Design, API Integration, and Deployment.",
+      price: "₦250,000",
+      duration: "3 Months",
       image: "/images/frontend.webp",
     },
     {
       id: 5,
-      title: "Web Development-Backend",
+      title: "Web Development - Backend",
       description:
-        "Learn Backend Web Development power websites behind the scenes, secure data, build scalable systems, and earn from high-demand skills.",
-      price: "₦120,000",
-      duration: "2 Months",
+        "Learn backend development and power websites behind the scenes.\n\nCourses include: NodeJS and MongoDB. Build secure APIs, manage databases, and create scalable systems.",
+      price: "₦200,000",
+      duration: "3 Months",
       image: "/images/backend.webp",
     },
     {
       id: 6,
       title: "Data Analysis",
       description:
-        "Learn Data Analysis transform raw data into insights, make smarter decisions, boost business growth, and earn with in-demand skills.",
-      price: "₦120,000",
+        "Learn data analysis and turn raw data into meaningful insights.\n\nCourses include: Excel Logic, Power BI, and MySQL. Build dashboards, analyze trends, and support smarter business decisions.",
+      price: "₦160,000",
       duration: "3 Months",
       image: "/images/data-analysis.webp",
     },
@@ -69,25 +69,25 @@ const CoursesSection: React.FC = () => {
       id: 7,
       title: "Video Editing",
       description:
-        "Learn how to edit videos like a pro, craft eye-catching stories, and transform your skills into steady income.",
-      price: "₦60,000",
+        "Become a skilled video editor and bring stories to life.\n\nYou’ll learn: Premiere Pro and Adobe After Effects, editing techniques, motion graphics, and real-world projects to build your portfolio and earn from your skills.",
+      price: "₦80,000",
       duration: "2 Months",
       image: "/images/video-editing.webp",
     },
     {
       id: 8,
-      title: "UI/UX Design",
+      title: "Product Design",
       description:
-        "Learn the skill of designing seamless user interfaces, master the art of detailed user research, and earn in high-paying currencies.",
-      price: "₦80,000",
+        "Design products that solve real problems and delight users.\n\nYou’ll learn: User Research, Wireframing, Prototyping, UI/UX Principles, and Product Strategy to create market-ready designs.",
+      price: "₦100,000",
       duration: "2 Months",
       image: "/images/uiux-design.webp",
     },
     {
       id: 9,
-      title: "Wordpress Development",
+      title: "WordPress Development",
       description:
-        "Learn WordPress development and build responsive, professional websites. From customizing themes and plugins to real-world projects",
+        "Build responsive, professional websites with WordPress.\n\nYou’ll learn: Theme customization, plugin integration, website management, and real-world project development to gain practical, job-ready skills.",
       price: "₦120,000",
       duration: "2 Months",
       image: "/images/wordpress.webp",
@@ -112,9 +112,10 @@ const CoursesSection: React.FC = () => {
   return (
     <section id="courses" className="py-12 md:py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="text-center mb-8 md:mb-12"
-        style={{fontFamily: "var(--font-ui)"}}>
+        <div
+          className="text-center mb-8 md:mb-12"
+          style={{ fontFamily: "var(--font-ui)" }}
+        >
           <h2 className="text-[16px] md:text-2xl lg:text-[32px] font-semibold text-gray-900 mb-2 md:mb-3">
             Explore All Courses
           </h2>
@@ -135,7 +136,7 @@ const CoursesSection: React.FC = () => {
                 height: "256px",
               }}
             >
-              {/* Course Image - Compact */}
+              {/* Course*/}
               <div className="relative h-20 overflow-hidden bg-gray-200">
                 <img
                   src={course.image}
@@ -148,23 +149,23 @@ const CoursesSection: React.FC = () => {
                 />
               </div>
 
-              
-              <div className="p-3 flex flex-col h-[176px]"
-              style={{fontFamily: "var(--font-ui)"}}>
+              <div
+                className="p-3 flex flex-col h-[176px]"
+                style={{ fontFamily: "var(--font-ui)" }}
+              >
                 <h3
-  className="text-[12px] font-semibold text-gray-900 leading-5
+                  className="text-[12px] font-semibold text-gray-900 leading-5
              truncate w-full max-w-[170px]"
->
-  {course.title}
-</h3>
-
+                >
+                  {course.title}
+                </h3>
 
                 <p className="text-[8px] text-gray-600 line-clamp-3 py-1 leading-3 flex-grow">
                   {course.description}
                 </p>
 
                 <div className="space-y-1 ">
-                  <div className="flex justify-between items-center text-xs mb-3">
+                  <div className="flex justify-between items-center text-xs mb-2">
                     <span className="font-medium text-gray-900">
                       {course.price}
                     </span>
@@ -199,13 +200,13 @@ const CoursesSection: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   onError={(e) => {
                     e.currentTarget.src =
-                      "https://via.placeholder.com/400x300?text=" + course.title;
+                      "https://via.placeholder.com/400x300?text=" +
+                      course.title;
                   }}
                 />
               </div>
 
-              <div className="p-5"
-              style={{fontFamily: "var(--font-ui)"}}>
+              <div className="p-5" style={{ fontFamily: "var(--font-ui)" }}>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {course.title}
                 </h3>
@@ -214,7 +215,7 @@ const CoursesSection: React.FC = () => {
                   {course.description}
                 </p>
 
-                <div className="flex justify-between items-center mb-3">
+                <div className="flex justify-between items-center mb-2">
                   <span className="text-xl font-semibold text-gray-900">
                     {course.price}
                   </span>
@@ -248,15 +249,20 @@ const CoursesSection: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   onError={(e) => {
                     e.currentTarget.src =
-                      "https://via.placeholder.com/400x300?text=" + course.title;
+                      "https://via.placeholder.com/400x300?text=" +
+                      course.title;
                   }}
                 />
               </div>
 
-              <div className="p-2 lg:p-6"
-              style={{fontFamily: "var(--font-ui)"}}>
-                <h3 className="text-[2px] lg:text-2xl font-medium lg:font-semibold text-black lg:mb-3 leading-5"
-                style={{fontFamily: "var(--font-ui)"}}>
+              <div
+                className="p-2 lg:p-6"
+                style={{ fontFamily: "var(--font-ui)" }}
+              >
+                <h3
+                  className="text-[2px] lg:text-2xl font-medium lg:font-semibold text-black lg:mb-3 leading-5"
+                  style={{ fontFamily: "var(--font-ui)" }}
+                >
                   {course.title}
                 </h3>
 

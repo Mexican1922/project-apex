@@ -48,8 +48,11 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faqs" className="py-16 lg:py-24 bg-white"
-    style={{fontFamily: "var(--font-ui)"}}>
+    <section
+      id="faqs"
+      className="py-16 lg:py-24 bg-white"
+      style={{ fontFamily: "var(--font-ui)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div
@@ -117,7 +120,7 @@ const FAQSection: React.FC = () => {
                     }`}
                   >
                     <p
-                      className="text-[12px] lg:text-[16px] text-black leading-3 pb-2"
+                      className="text-[12px] lg:text-[16px] text-black leading-6 pb-2"
                       style={{ fontFamily: "var(--font-ui)" }}
                     >
                       {faq.answer}
