@@ -187,57 +187,54 @@ const CoursesSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Mobile */}
-        <div className="grid grid-cols-2 md:hidden gap-3 justify-items-center">
+        {/* Mobile*/}
+        <div className="grid grid-cols-1 md:hidden gap-4 justify-items-center">
           {courses.map((course) => (
             <div
               key={course.id}
-              className={`bg-white rounded-xl overflow-hidden shadow-sm border border-gray-300 hover:shadow-md transition-all duration-300 ${
-                course.id === 9 ? "col-span-2" : ""
-              }`}
+              className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-300 hover:shadow-md transition-all duration-300 w-full max-w-md"
               style={{
-                width: "100%",
-                maxWidth: "183px",
-                height: "256px",
+                height: "auto",
               }}
             >
-              <div className="relative h-20 overflow-hidden bg-gray-200">
+              <div className="relative h-40 overflow-hidden bg-gray-200">
                 <img
                   src={course.image}
                   alt={course.title}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.src =
-                      "https://via.placeholder.com/183x80?text=" + course.title;
+                      "https://via.placeholder.com/400x160?text=" +
+                      course.title;
                   }}
                 />
               </div>
 
               <div
-                className="p-3 flex flex-col h-[176px]"
+                className="p-4 flex flex-col"
                 style={{ fontFamily: "var(--font-ui)" }}
               >
-                <h3 className="text-[12px] font-semibold text-gray-900 leading-5 truncate w-full max-w-[170px]">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {course.title}
                 </h3>
 
-                <p className="text-[8px] text-gray-600 line-clamp-3 py-1 leading-3 flex-grow">
+                <p className="text-sm text-gray-600 line-clamp-6 mb-3 leading-4">
                   {course.description}
                 </p>
 
-                <div className="space-y-1">
-                  <div className="flex justify-between items-center text-xs mb-2">
-                    <span className="font-medium text-gray-900">
+                <div className="space-y-2 mt-auto">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-900 text-base">
                       {course.price}
                     </span>
-                    <span className="text-gray-600 text-[8px]">
+                    <span className="text-gray-600 text-xs">
                       Duration: {course.duration}
                     </span>
                   </div>
 
                   <button
                     onClick={() => handleEnrollNow(course)}
-                    className="w-full py-1.5 px-2 border border-[#2E083A] text-black rounded text-[10px] font-normal transition-all duration-200 leading-3 cursor-pointer"
+                    className="w-full py-2.5 px-4 border border-[#2E083A] text-black rounded text-sm font-medium transition-all duration-200 cursor-pointer hover:bg-[#2E083A] hover:text-white"
                   >
                     Enroll Now
                   </button>
