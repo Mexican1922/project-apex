@@ -16,37 +16,43 @@ const TestimonialsSection: React.FC = () => {
       id: 1,
       name: "Sandra Onyekwelu",
       role: "UI/UX Designer",
-      content: "I never imagined I could design apps this well. Apex Tech made learning simple and practical, and now I take on real design projects with confidence.",
+      content:
+        "I never imagined I could design apps this well. Apex Tech made learning simple and practical, and now I take on real design projects with confidence.",
     },
     {
       id: 2,
       name: "Ifeanyi Nwosu",
       role: "Web Developer",
-      content: "I joined without knowing how to code a single line. Today, I can build full websites on my own. All thanks to the way the instructors taught us.",
+      content:
+        "I joined without knowing how to code a single line. Today, I can build full websites on my own. All thanks to the way the instructors taught us.",
     },
     {
       id: 3,
       name: "Eze Amarachi",
       role: "Data Analyst",
-      content: "The mentorship was my best part. My mentor guided me step by step, and shortly after, I got my first internship in data analysis.",
+      content:
+        "The mentorship was my best part. My mentor guided me step by step, and shortly after, I got my first internship in data analysis.",
     },
     {
       id: 4,
       name: "Adaobi Nwachukwu",
       role: "Digital Marketer",
-      content: "I never understood how to run proper campaigns before. Apex Tech broke everything down so well, and now I manage social media ads that actually convert.",
+      content:
+        "I never understood how to run proper campaigns before. Apex Tech broke everything down so well, and now I manage social media ads that actually convert.",
     },
     {
       id: 5,
       name: "Ibiyeomi Wisdom",
       role: "Video Editor",
-      content: "The practical approach helped me a lot. We worked on real projects, and now I can call myself a professional video editor.",
+      content:
+        "The practical approach helped me a lot. We worked on real projects, and now I can call myself a professional video editor.",
     },
     {
       id: 6,
       name: "Oghenetega Christian",
       role: "Digital Marketer",
-      content: "The classes were practical, not just theory. I worked on real campaigns during training, and today I confidently handle digital marketing for small businesses.",
+      content:
+        "The classes were practical, not just theory. I worked on real campaigns during training, and today I confidently handle digital marketing for small businesses.",
     },
   ];
 
@@ -63,9 +69,10 @@ const TestimonialsSection: React.FC = () => {
     <section id="testimonials" className="relative w-full h-0">
       <div className="absolute left-0 right-0 top-0 -translate-y-1/2 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="sm:hidden bg-white rounded-3xl shadow-2xl mx-auto" style={{ maxWidth: "382px" }}>
-            
+          <div
+            className="sm:hidden bg-white rounded-3xl shadow-2xl mx-auto"
+            style={{ maxWidth: "382px" }}
+          >
             <div className="text-center pt-6 pb-4 px-6">
               <h2 className="text-base font-semibold text-gray-900 mb-2">
                 Student's Testimonial
@@ -75,7 +82,6 @@ const TestimonialsSection: React.FC = () => {
               </p>
             </div>
 
-          
             <div className="px-6 pb-6">
               <div
                 ref={scrollContainerRef}
@@ -109,14 +115,14 @@ const TestimonialsSection: React.FC = () => {
                 ))}
               </div>
 
-              
               <div className="flex justify-center gap-1.5 mt-4">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => {
                       if (scrollContainerRef.current) {
-                        const containerWidth = scrollContainerRef.current.offsetWidth;
+                        const containerWidth =
+                          scrollContainerRef.current.offsetWidth;
                         scrollContainerRef.current.scrollTo({
                           left: containerWidth * index,
                           behavior: "smooth",
@@ -133,7 +139,6 @@ const TestimonialsSection: React.FC = () => {
             </div>
           </div>
 
-          
           <div className="hidden sm:block lg:hidden bg-white rounded-3xl p-6 shadow-2xl h-[805px]">
             <div className="text-center mb-7">
               <h2 className="text-2xl font-semibold text-gray-900 mb-2">
@@ -144,7 +149,6 @@ const TestimonialsSection: React.FC = () => {
               </p>
             </div>
 
-            
             <div className="grid grid-cols-2 gap-6">
               {testimonials.map((testimonial) => (
                 <div
@@ -167,7 +171,6 @@ const TestimonialsSection: React.FC = () => {
             </div>
           </div>
 
-         
           <div className="hidden lg:block bg-white rounded-3xl p-12 shadow-2xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-3">
