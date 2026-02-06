@@ -37,7 +37,7 @@ const CoursesSection: React.FC = () => {
       description:
         "Grow your online influence and connect with the right audience.\n\nYou'll learn: Social Media Management, Content Creation, and SEO Optimization to create engaging campaigns and turn clicks into deals or gigs.",
       price: "₦60,000",
-      priceValue: 10000,
+      priceValue: 60000,
       duration: "2 Months",
       image: "/images/digital-marketing.webp",
     },
@@ -134,7 +134,7 @@ const CoursesSection: React.FC = () => {
     ? {
         reference: new Date().getTime().toString(),
         email: userEmail,
-        amount: selectedCourse.priceValue * 1,
+        amount: selectedCourse.priceValue * 100,
         publicKey: publicKey,
         metadata: {
           custom_fields: [
