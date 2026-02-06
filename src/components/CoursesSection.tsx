@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { usePaystackPayment } from "react-paystack";
+import PaymentSuccess from "./PaymentSucessful";
 
 interface Course {
   id: number;
@@ -11,11 +12,23 @@ interface Course {
   image: string;
 }
 
+interface PaymentSuccessData {
+  courseName: string;
+  coursePrice: string;
+  studentName: string;
+  studentEmail: string;
+  reference: string;
+}
+
 const CoursesSection: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userName, setUserName] = useState("");
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [paymentData, setPaymentData] = useState<PaymentSuccessData | null>(
+    null,
+  );
 
   const courses: Course[] = [
     {
@@ -144,12 +157,42 @@ const CoursesSection: React.FC = () => {
     config || { reference: "", email: "", amount: 0, publicKey: "" },
   );
 
-  const onSuccess = (reference: string) => {
+  const onSuccess = (reference: unknown) => {
     console.log("Payment successful:", reference);
-    alert(
-      `Payment successful! Welcome to ${selectedCourse?.title}. We'll send course details to ${userEmail}`,
-    );
+
+    // Safely extract a reference string from the callback (avoid `any`)
+    let referenceString = "";
+
+    if (typeof reference === "string") {
+      referenceString = reference;
+    } else if (reference && typeof reference === "object") {
+      const refObj = reference as Record<string, unknown>;
+      if (typeof refObj.reference === "string") {
+        referenceString = refObj.reference;
+      } else if (typeof refObj.transaction === "string") {
+        referenceString = refObj.transaction;
+      } else {
+        try {
+          referenceString = JSON.stringify(refObj);
+        } catch {
+          referenceString = String(refObj);
+        }
+      }
+    } else {
+      referenceString = String(reference);
+    }
+
+    setPaymentData({
+      courseName: selectedCourse?.title || "",
+      coursePrice: selectedCourse?.price || "",
+      studentName: userName,
+      studentEmail: userEmail,
+      reference: referenceString,
+    });
+
     setShowPaymentModal(false);
+    setShowSuccessModal(true);
+
     setUserEmail("");
     setUserName("");
     setSelectedCourse(null);
@@ -157,7 +200,6 @@ const CoursesSection: React.FC = () => {
 
   const onClose = () => {
     console.log("Payment closed");
-    alert("Payment cancelled");
   };
 
   const handlePaymentSubmit = () => {
@@ -286,7 +328,7 @@ const CoursesSection: React.FC = () => {
 
                 <button
                   onClick={() => handleEnrollNow(course)}
-                  className="w-full py-2.5 px-4 border-2 border-[#2E083A] text-black rounded-lg font-semibold transition-all duration-200 cursor-pointer"
+                  className="w-full py-2.5 px-4 border-2 border-[#2E083A] text-black rounded-lg font-semibold transition-all duration-200 cursor-pointer hover:bg-[#2E083A] hover:text-white"
                 >
                   Enroll Now
                 </button>
@@ -320,7 +362,7 @@ const CoursesSection: React.FC = () => {
                   {course.title}
                 </h3>
 
-                <p className="text-[#474747] text-base mb-4">
+                <p className="text-[#474747] text-base mb-4 line-clamp-4">
                   {course.description}
                 </p>
 
@@ -403,7 +445,7 @@ const CoursesSection: React.FC = () => {
                 </button>
                 <button
                   onClick={handlePaymentSubmit}
-                  className="flex-1 py-3 px-4 bg-primary-800 hover:bg-primary-900 text-white font-normal  rounded-lg font-semibold transition-all"
+                  className="flex-1 py-3 px-4 bg-primary-800 hover:bg-primary-900 text-white rounded-lg font-semibold transition-all"
                 >
                   Pay Now
                 </button>
@@ -411,6 +453,21 @@ const CoursesSection: React.FC = () => {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Payment Success Modal */}
+      {showSuccessModal && paymentData && (
+        <PaymentSuccess
+          courseName={paymentData.courseName}
+          coursePrice={paymentData.coursePrice}
+          studentName={paymentData.studentName}
+          studentEmail={paymentData.studentEmail}
+          reference={paymentData.reference}
+          onClose={() => {
+            setShowSuccessModal(false);
+            setPaymentData(null);
+          }}
+        />
       )}
     </section>
   );

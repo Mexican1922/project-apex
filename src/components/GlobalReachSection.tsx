@@ -109,7 +109,7 @@ const GlobalReachSection: React.FC = () => {
   ];
 
   const handleRegisterNow = () => {
-    const contactSection = document.getElementById("courses");
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
       const offset = 80;
       const elementPosition = contactSection.getBoundingClientRect().top;
